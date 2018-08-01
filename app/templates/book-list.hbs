@@ -1,0 +1,15 @@
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h2>Welcome to the Book Store!</h2>
+  <p>Bookstore is a specialist book buyers with over 20 years of experience and we buy collections of all sizes or individual books.</p>
+  {{#link-to "about" class="button"}}
+    About Us
+  {{/link-to}}
+</div>
+{{shopping-cart}}
+{{#each model as |bookItem|}}
+  {{book-listing book=bookItem}}
+{{/each}}
+
+
+{{!-- {{outlet}} --}}

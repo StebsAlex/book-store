@@ -1,0 +1,25 @@
+{{outlet}}
+
+
+
+The Book Title is  {{model.title}}
+
+
+<div class="jumbo show-listing">
+  <h2 class="title">{{model.title}}</h2>
+  <div class="right detail-section">
+    <div class="detail owner">
+      <strong>Author:</strong> {{model.author}}
+    </div>
+    <div class="detail">
+      <strong>Genre:</strong> {{ model.genre}}
+    </div>
+    <div class="detail">
+      <strong>Price: £</strong> {{model.price}}
+    </div>
+    <p class="description">
+      <strong>Description: </strong>{{model.description}}
+    </p>
+  </div>
+  <img src="{{model.image}}" class="rental-pic">
+</div>

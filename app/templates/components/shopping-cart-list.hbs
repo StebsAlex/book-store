@@ -1,0 +1,23 @@
+{{!-- {{ log "****" shoppingCart.shopping}} --}}
+
+{{#each shoppingCart.basket as |item|}}
+  {{log '****' item}}
+  <article class="listing">
+    <a>
+      <img src="{{item.book.image}}" alt="">
+    </a>
+    <h3>{{item.book.title}}</h3>
+    <div class="detail owner">
+      <span>Author:</span> {{item.book.author}}
+    </div>
+    <div class="detail price type">
+      <span>Price: £</span>{{item.book.price}}
+    </div>
+    <div class="detail quantity type">
+      <span>Quantity </span>{{item.quantity}}
+    </div>
+    <span>
+      <p>{{remove-button book=item.book}} </p>
+    </span>
+  </article>
+{{/each}}

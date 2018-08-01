@@ -1,0 +1,25 @@
+
+<article class="listing">
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{book.image}}" alt="">
+    <small>View Larger</small>
+  </a>
+  <h3>
+    {{#link-to 'book' book}}
+      <span class="book_title"> {{book.title}} </span>
+    {{/link-to}}  </h3>
+  <div class="detail owner">
+    <span>Author:</span> <span class="book_author">{{book.author}}</span>
+  </div>
+  <div class="detail type">
+    <span>Price: £</span> <span class="book_price">{{book.price}} </span>
+  </div>
+
+
+  {{!-- <button {{action 'addToCart' books}} class="button"> Add to Cart > </button> --}}
+<span class="detail owner">
+    <p> {{add-to-cart-button book=book }} </p>
+  </span>
+  {{!-- {{add-to-cart-button book=book}} --}}
+
+</article>
